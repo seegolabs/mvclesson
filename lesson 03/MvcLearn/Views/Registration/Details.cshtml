@@ -1,0 +1,52 @@
+﻿@model MvcLearn.Models.Registration
+@{
+    ViewBag.Title = "Detail Registration";
+}
+
+<h2>Detail Registration</h2>
+
+<form class="form-horizontal" method="post">
+    <div class="control-group">
+        <label class="control-label" for="RegName">Registration Name</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.RegName, new { @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="RegDate">Registration RegDate</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.RegDate, new { @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="Address">Address</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Address, new { @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="Status">Status</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Status, new { @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="Status">IsApproved</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.IsApproved, new { @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label"></label>
+        <div class="controls">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.RegID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+
+</form>
