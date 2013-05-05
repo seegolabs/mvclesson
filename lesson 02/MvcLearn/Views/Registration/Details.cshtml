@@ -1,40 +1,52 @@
 ﻿@model MvcLearn.Models.Registration
-
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detail Registration";
 }
 
-<h2>Details</h2>
+<h2>Detail Registration</h2>
 
-<fieldset>
-    <legend>Registration</legend>
-
-    <div class="display-label">RegName</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.RegName)
+<form class="form-horizontal" method="post">
+    <div class="control-group">
+        <label class="control-label" for="RegName">Registration Name</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.RegName, new { @readonly = "readonly" })
+        </div>
     </div>
 
-    <div class="display-label">RegDate</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.RegDate)
+    <div class="control-group">
+        <label class="control-label" for="RegDate">Registration RegDate</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.RegDate, new { @readonly = "readonly" })
+        </div>
     </div>
 
-    <div class="display-label">Address</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
+    <div class="control-group">
+        <label class="control-label" for="Address">Address</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Address, new { @readonly = "readonly" })
+        </div>
     </div>
 
-    <div class="display-label">Status</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Status)
+    <div class="control-group">
+        <label class="control-label" for="Status">Status</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.Status, new { @readonly = "readonly" })
+        </div>
     </div>
 
-    <div class="display-label">IsApproved</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.IsApproved)
+    <div class="control-group">
+        <label class="control-label" for="Status">IsApproved</label>
+        <div class="controls">
+            @Html.TextBoxFor(model => model.IsApproved, new { @readonly = "readonly" })
+        </div>
     </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.RegID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+    <div class="control-group">
+        <label class="control-label"></label>
+        <div class="controls">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.RegID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+
+</form>
