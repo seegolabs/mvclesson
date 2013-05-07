@@ -98,6 +98,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DbController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuizController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -227,6 +228,7 @@
     <Content Include="Views\Registration\Details.cshtml" />
     <Content Include="Views\Home\Hello2.cshtml" />
     <Content Include="Views\Shared\_LayoutBootstrap.cshtml" />
+    <Content Include="Views\Quiz\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
