@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Lesson2.Models.Registration>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Registration List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Registration")
+</p>
+<table>
+    <tr>
+        <th>RegDate
+        </th>
+        <th>RegName
+        </th>
+        <th>Age
+        </th>
+        <th>Address
+        </th>
+        <th>PackageCode
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackageCode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RegId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RegId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RegId })
+            </td>
+        </tr>
+    }
+
+</table>
